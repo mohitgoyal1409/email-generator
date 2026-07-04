@@ -39,7 +39,9 @@ function App() {
       toast.error("Please fill all required fields");
       return;
     } 
-    const newData = `${firstName}${lastName}`;
+    firstName.trim("");
+    lastName.trim("");
+    const newData = `${firstName}${lastName}`.replace(/\s+/g, "");
     setData(newData);
   }
 
